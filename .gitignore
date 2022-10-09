@@ -1,0 +1,7 @@
+﻿YangInfoRecord/Library
+YangInfoRecord/Logs
+YangInfoRecord/.vs
+YangInfoRecord/obj
+YangInfoRecord/Temp
+*.csproj
+YangInfoRecord/YangInfoRecord.sln
