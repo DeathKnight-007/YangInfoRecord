@@ -37,7 +37,7 @@ public class MapController
     }
     public Vector3 GetMapSize()
     {
-        return mapDataModel.mapData.size;
+        return mapDataModel.currentMapData.size;
     }
     public KindInfo GetKindInfo()
     {
@@ -45,10 +45,29 @@ public class MapController
     }
     public Dictionary<int, List<MapBlockData>> GetMapInfo()
     {
-        return mapDataModel.mapData.info;
+        return mapDataModel.currentMapData.info;
+    }
+    public MapBlockData GetMapBlockInfo(int layer, Vector2 coord)
+    {
+        foreach(var item in mapDataModel.currentMapData.info[layer])
+        {
+            if (item.coord == coord)
+            {
+                return item;
+            }
+        }
+        return null;
     }
     public void SaveData()
     {
         mapDataModel.SaveMapData();
+    }
+    public void CreateOneMap(string name)
+    {
+        mapDataModel.CreateOneMap(name);
+    }
+    public void SetCurrentMap(MapData mapData)
+    {
+        mapDataModel.currentMapData = mapData;
     }
 }

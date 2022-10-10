@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0641fd252858ac4c8f19ee44e3dd8b6, type: 3}
   m_Name: kind
   m_EditorClassIdentifier: 
-  kind: 
-  textureName: []
+  kind: 010000000200000003000000
+  textureName:
+  - red
+  - green
+  - blue
